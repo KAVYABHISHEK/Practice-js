@@ -180,7 +180,7 @@ console.log(add());
 
 
 ///////////////////////  JavaScript Scopes  ////////////////// 
-/*
+
 //Block scope
 // the variables declared in blocks cannot accessed out side the block.
 {
@@ -223,4 +223,89 @@ const buttonOne = document.querySelector('.button__one');
 buttonOne.addEventListener('click',function(){
     document.querySelector('body').style.background = '#f5f5dc'
 });
+
+///////////////////  Data Structures and Algorithms  ///////////////////
+
+//  Big O notation
+// big O Time complexity  it is expressed in terms of the input
+
+// Time complexity -- is the time taken by an algorithm to run as a function of input size.
+
+function sum(n){
+    let sum = 0;
+    for (let i=1; i<=n; i++){
+        sum += i;
+    }
+    return sum;
+}
+console.log(sum(10))
+
+ //     Time complexity
+
+ //       O(n) -------linear
+
+ function summation (n){
+    return (n * (n+1))/2;
+ }
+ console.log(summation(5));
+
+ // Time complexity 
+
+ // O(1) ----------constant
+
+// for (i = 1; i<=n;i++){
+ //   for(j=1; j<=i;j++){
+
+   // }
+ //}
+ // Time complexity 
+ //   O(n*n)   3n*n+5n+1
+
+ // if there are two nested loops then the time complexity is quadratic
+ 
+ // if three nested loops are present it is cubic
+ //  O(n*n*n) 
+ // if input size reduces by half every iteration its logarithmic
+ //  O(logn)
+
+ // Space complexity
+ //  O(1) -- constant
+ //  O(logn) --logarithmic
+ //  O(n) --linear
+
+ // Arrays and Objects time complexity
+   // Objects 
+  /* insert - O(1)
+   remove - O(1)
+   Access - O(1)
+   search - O(n)
+   Object.keys() - O(n)
+   Object.values() - o(n)
+   Object.entries() - O(n)
 */
+  // Arrays
+  /*
+  insert/remove at end - O(1)
+  insert/remove at beggining - O(n)
+  Access - O(1)
+  search - O(n)
+  push/pop - O(1)
+  shift/unshift/concat/slice/splice - O(n)
+  foreach/map/filter/reduce - O(n)
+*/
+
+/////////  Math algorithm  ////////////
+
+/// Fibonacci sequence
+function fibonacci (n){
+    const fib =[0,1]
+     for(let i=2;i<n;i++ ){
+         fib[i] = fib[i-1]+fib[i-2]
+     }
+     return fib
+   }
+   
+  
+ console.log(fibonacci(5));
+ console.log(fibonacci(10));
+ console.log(fibonacci(7));
