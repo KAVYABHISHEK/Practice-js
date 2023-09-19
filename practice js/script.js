@@ -144,8 +144,13 @@ let fullName = person.fullName.bind(member);
 console.log(fullName());
 
 // Clousers
-//A closure is created when a function is defined inside another function, and the inner function references variables in the outer function's scope. When the inner function is returned from the outer function, it retains a reference to the outer function's scope, and can continue to access those variables even after the outer function has finished executing. Vice-Versa is not true!!
-//In simple terms a closure can "remember" values from its outer function's scope and use them later, even if the outer function has returned and those values would normally be out of scope.
+//A closure is created when a function is defined inside another function, 
+//and the inner function references variables in the outer function's scope.
+//When the inner function is returned from the outer function,
+//it retains a reference to the outer function's scope, and can continue to access those variables even after the outer function has finished executing.
+//Vice-Versa is not true!!
+//In simple terms a closure can "remember" values from its outer function's scope and use them later, 
+//even if the outer function has returned and those values would normally be out of scope.
 
 let g =  6;
 
