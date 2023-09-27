@@ -314,3 +314,34 @@ function fibonacci (n){
  console.log(fibonacci(5));
  console.log(fibonacci(10));
  console.log(fibonacci(7));
+
+////////////////////////////  ps ////////////////////
+
+function findElementsWithSum(arr, targetSum) {
+    const result = [];
+  
+    for (let i = 0; i < arr.length; i++) {
+      for (let j = i + 1; j < arr.length; j++) {
+        if (arr[i] + arr[j] === targetSum) {
+          result.push([arr[i], arr[j]]);
+        }
+      }
+    }
+  
+    return result;
+  }
+  
+  const inputArray = [2, 7, 11, 15, 6, 3, 4];
+  const target = 9;
+  
+  const pairs = findElementsWithSum(inputArray, target);
+  
+  if (pairs.length === 0) {
+    console.log("No pairs found with the given sum.");
+  } else {
+    console.log("Pairs with sum equal to", target, "are:");
+    pairs.forEach(pair => {
+      console.log(pair[0], "and", pair[1]);
+    });
+  }
+  
